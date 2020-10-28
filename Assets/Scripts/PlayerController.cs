@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public GameObject currentPlatform;
     public float runningSpeed;
+   [HideInInspector]
    public Vector3 spawnPosition;
    public float jumpForce;
    private bool jumpAllowed;
@@ -37,10 +38,11 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      gameObject.transform.position = spawnPosition;
+      spawnPosition = gameObject.transform.position;
       jumpAllowed = true;
 
       enemyList = new List<EnemyController>();
+      
     }
 
     // Update is called once per frame
