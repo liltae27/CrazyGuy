@@ -55,15 +55,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\WindmillArmController.cs" />
+    <Compile Include="Assets\Scripts\ReversalMovementPowerupScript.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\WindmillController.cs" />
     <Compile Include="Assets\Scripts\RNGVerticalBounce.cs" />
+    <Compile Include="Assets\Scripts\GloveBoopController.cs" />
     <Compile Include="Assets\Scripts\LavaController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\NextLevelPortal.cs" />
     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Spectator.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\WindmillArmController.cs" />
+    <Compile Include="Assets\Scripts\FallingFloor.cs" />
+    <Compile Include="Assets\MoveMultiplier.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
+     <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.2f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

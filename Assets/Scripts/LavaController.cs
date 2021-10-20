@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LavaController : MonoBehaviour
 {
@@ -11,10 +12,20 @@ public class LavaController : MonoBehaviour
     }
    private void OnTriggerEnter(Collider other)
    {
-      Debug.Log("Collided");
+     
       if (other.gameObject.CompareTag("Player"))
       {
-         other.gameObject.SendMessage("Respawn");
+         // call respawn function that resets player position back to original when hit lava 
+         //reset velocity and makes zombies let go of player
+          //other.gameObject.SendMessage("Respawn");
+
+         //reset everything when die                                                                                                                                                              
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
       }
    }
 

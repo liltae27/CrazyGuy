@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     public bool grabbing;
     public float pushAmount;
     private Vector3 distanceToPlayer;
+   public float boopForce;
    public float killHeight;
     public void LetGo()
    {
@@ -30,15 +31,22 @@ public class EnemyController : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
       PlayerController PC = collision.gameObject.GetComponent<PlayerController>();
+      //if hit player  
         if (PC !=null)
         {
+         //player higher than zombie and hit on head then die
          if (PC.gameObject.transform.position.y > transform.position.y + killHeight)
          {
             Destroy(gameObject);
 
+            PC.rb.AddForce(new Vector3(0, boopForce, 0), ForceMode.Impulse);
          }
+         //grab player
          else
          {
+            
+           // gameObject.tag = "Player"; //zombie grab player on fall floor it falls
+
             grabbing = true;
             PC.enemyList.Add(this);
             distanceToPlayer = this.transform.position - player.transform.position;

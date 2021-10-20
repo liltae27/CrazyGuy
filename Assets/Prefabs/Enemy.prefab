@@ -130,4 +130,5 @@ MonoBehaviour:
   player: {fileID: 0}
   grabbing: 0
   pushAmount: 1.2
+  boopForce: 6.28
   killHeight: 1.5
